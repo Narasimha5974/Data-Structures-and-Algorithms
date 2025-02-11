@@ -9,7 +9,7 @@ int main() {
             if (arr[min] > arr[i]) {
                 min = i;
             }
-        
+        }
         // Swap arr[j] and arr[min]
         temp = arr[min];
         arr[min] = arr[j];
