@@ -8,3 +8,5 @@ int main(){
         }
     }
 }
+
+// OUTPUT :- POSITION OF THE ELEMENT: 3
