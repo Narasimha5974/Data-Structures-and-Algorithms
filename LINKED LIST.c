@@ -42,6 +42,15 @@ int main(){
  s2->link=s1;  // out put : 102->32->10->20->30->
  head=s2;
  
+ struct Node*s3=malloc(sizeof(struct Node));
+  s3->data=122;
+  s3->link=NULL;
+  
+   //add begin
+   head=NULL;
+ s3->link=s2;  // out put : 122->102->32->10->20->30->
+ head=s3;
+ 
  //delete end
  d2->link=NULL;   //out put : 102->32->10->20->
  free(d3);
