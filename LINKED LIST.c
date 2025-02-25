@@ -19,9 +19,14 @@ int main(){
   struct Node*d3=malloc(sizeof(struct Node));
   d3->data=30;
   d3->link=NULL;
+  
+  struct Node*d4=malloc(sizeof(struct Node));
+  d4->data=40;
+  d4->link=NULL;
 
   d1->link=d2;
   d2->link=d3;
+  d3->link=d4;
   struct Node*head=d1;   //out put : 10->20->30->
 
  struct Node*s1=malloc(sizeof(struct Node));
@@ -34,7 +39,7 @@ int main(){
  head=s1;
  
   struct Node*s2=malloc(sizeof(struct Node));
-  s2->data=102;
+  s2->data=222;
   s2->link=NULL;
   
    //add begin
@@ -42,18 +47,24 @@ int main(){
  s2->link=s1;  // out put : 102->32->10->20->30->
  head=s2;
  
- struct Node*s3=malloc(sizeof(struct Node));
-  s3->data=122;
+  struct Node*s3=malloc(sizeof(struct Node));
+  s3->data=60;
   s3->link=NULL;
   
    //add begin
    head=NULL;
- s3->link=s2;  // out put : 122->102->32->10->20->30->
+ s3->link=s2;  // out put : 102->32->10->20->30->
  head=s3;
  
  //delete end
- d2->link=NULL;   //out put : 102->32->10->20->
- free(d3);
+  d3->link=NULL;   //out put : 102->32->10->20->
+  free(d4);
+  
+  //delete at begin
+if(head != NULL){
+  head=head->link;
+  free(s3);
+}                       //out put : 222->32->10->20->30->
 
   while(head != NULL){
     printf("%d->",head->data);
