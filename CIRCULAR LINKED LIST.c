@@ -112,3 +112,5 @@ int main(){
   head=delete_begin(head);
   print_cll(head);
 }
+
+// OUT PUT : 50->10->20->
