@@ -39,3 +39,11 @@ int main(){
   printf("%d ",root->left->right->data);
   printf("%d ",root->left->right->left->data);
 }
+
+
+
+                                        // OUTPUT : Tree Data Is : 10 20 30 40 50 70 
+
+
+
+
